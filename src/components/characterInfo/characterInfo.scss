@@ -1,0 +1,96 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.character-info {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  column-gap: 30px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $white-basic-op-60;
+}
+
+.character-info__descr {
+  display: flex;
+  flex-direction: column;
+}
+
+.character-info__poster {
+  position: relative;
+  width: 320px;
+  height: 420px;
+}
+
+.character-info__like {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: $black-basic-op-60;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background-color: $red-op-60;
+  }
+
+  path {
+    fill: $white-basic;
+  }
+
+  &--liked {
+    background-color: $red;
+
+    path {
+      fill-rule: nonzero;
+      fill: $white-basic;
+    }
+  }
+}
+
+.character-info__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-info__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.character-info__bio {
+  margin: 0;
+  margin-bottom: auto;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.character-info__comics-list {
+  @include list-reset;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.character-info__comics-item {
+  padding: 5px;
+  padding-left: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+
+  a {
+    color: $black-basic;
+  }
+}
+
+.character-info__link {
+  align-self: flex-end;
+}

@@ -1,0 +1,32 @@
+@import '../../style/variables.scss';
+
+.search-form {
+  padding: 10px;
+  background-color: $white-basic-op-60;
+}
+
+.search-form__search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-form__search-label {
+  margin-right: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.search-form__search-input {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+  border: none;
+  border-bottom: 2px solid $grey-dark;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  line-height: 22px;
+}

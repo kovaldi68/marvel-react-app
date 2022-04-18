@@ -1,0 +1,19 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.comics-list {
+  padding: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: $white-basic-op-60;
+}
+
+.comics-list__grid {
+  @include list-reset;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
+}

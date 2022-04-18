@@ -1,0 +1,18 @@
+@import '../../style/variables.scss';
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.logo__image {
+  margin-right: 10px;
+}
+
+.logo__text {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: $white-basic;
+  text-transform: uppercase;
+}

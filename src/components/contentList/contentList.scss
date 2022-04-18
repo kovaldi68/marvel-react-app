@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+@import '../../style/mixin.scss';
+
+.content-list {
+  @include list-reset;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content-list__item {
+  padding: 0 10px;
+  cursor: pointer;
+
+  a {
+    color: $black-basic;
+  }
+
+  &:hover, &:focus {
+    a {
+      color: $red;
+    }
+  }
+
+  &:active {
+    a {
+      color: $red;
+    }
+  }
+
+  &--active {
+    a {
+      color: $red;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+//viewports
+
+$desktop-width: 1920px;
+
+//font
+
+$main-font: 'Open Sans', 'Verdana', sans-serif;
+
+// black&white
+
+$white-basic: #ffffff;
+$white-basic-op-60: rgba($white-basic, 0.8);
+$black-basic: #000000;
+$black-basic-op-60: rgba($black-basic, 0.6);
+
+//grey
+
+$grey-dark: #2c2d2e;
+$grey-dark-op-80: rgba($grey-dark, 0.8);
+$grey-border: #c9ccd4;
+
+//red
+
+$red: #c50505;
+$red-op-60: rgba($red, 0.6);
+
+//transition
+
+$transition-time-slow: 300ms;
