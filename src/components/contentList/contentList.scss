@@ -15,26 +15,20 @@
 .content-list__item {
   padding: 0 10px;
   cursor: pointer;
+}
 
-  a {
-    color: $black-basic;
-  }
+.content-list__link {
+  color: $black-basic;
 
   &:hover, &:focus {
-    a {
-      color: $red;
-    }
+    color: $red;
   }
 
   &:active {
-    a {
-      color: $red;
-    }
+    color: $red;
   }
 
   &--active {
-    a {
-      color: $red;
-    }
+    color: $red;
   }
 }

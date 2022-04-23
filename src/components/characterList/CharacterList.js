@@ -1,28 +1,35 @@
-import './characterList.scss';
+import { Component } from 'react';
 import LoadMoreButton from '../loadMoreButton/LoadMoreButton';
 import CharacterCard from '../characterCard/CharacterCard';
-import { Component } from 'react';
+import Marvel from '../../services/marvelApi';
 
-import Marvel from '../../marvel/marvelApi';
+import './characterList.scss';
 
 class CharacterList extends Component {
-    state = {
-        characters: this.marvelGetData.getAllCharacters()
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: [],
+        };
     }
 
-    marvelGetData = new Marvel();
+    getData = new Marvel();
 
-
+    componentDidMount() {
+        this.getData.getAllCharacters()
+        .then(res => this.setState( { data: res }));
+    }
 
     render() {
         return (
             <div className="page-content__character-list character-list">
                 <ul className="character-list__grid">
-                    {this.state.characters.forEach(item => {
-                        <CharacterCard name={item.name} source={item.thumbnail}></CharacterCard>
-                    })}
+                    {this.state.data.map(item => 
+                        <CharacterCard key={item.id} name={item.name} source={item.thumbnail}></CharacterCard>
+                    )}
                 </ul>
-                <LoadMoreButton></LoadMoreButton>
+                <LoadMoreButton />
             </div>
         )
     }

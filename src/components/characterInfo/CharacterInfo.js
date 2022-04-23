@@ -6,7 +6,7 @@ function CharacterInfo() {
         <div className="page-content__character-info character-info">
             <div className="character-info__poster">
                 <img className="character-info__image" src="content/img/wonder-woman.jpg" alt="" width="320" height="420"/>
-                <LikeButton class={'character-info'}></LikeButton>
+                <LikeButton class="character-info__like"></LikeButton>
             </div>
             <div className="character-info__descr">
                 <a className="character-info__link button button--back" href="">back to the list</a>

@@ -6,9 +6,9 @@ function PageFooter() {
     return (
         <footer className="page-footer">
             <div className="page-footer__container container">
-                <Logo></Logo>
+                <Logo />
 
-                <UserBlock></UserBlock>
+                <UserBlock />
             </div>
         </footer>
     )

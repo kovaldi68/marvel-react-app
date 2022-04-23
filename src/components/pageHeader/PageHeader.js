@@ -6,9 +6,9 @@ function PageHeader() {
     return (
         <header className="page-header">
             <div className="page-header__container container">
-                <Logo></Logo>
+                <Logo />
 
-                <UserBlock></UserBlock>
+                <UserBlock />
             </div>
         </header>
     )
