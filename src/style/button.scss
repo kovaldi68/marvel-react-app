@@ -1,0 +1,61 @@
+@import './variables';
+
+.button {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    background-color: $black-basic;
+    border-style: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $white-basic;
+  
+    &:hover,
+    &:focus {
+      background-color: $red;
+    }
+  
+    &:active {
+      background-color: $red-op-60;
+    }
+  
+    &--back {
+      display: inline;
+      padding: 0;
+      padding-left: 25px;
+      font-size: 16px;
+      line-height: 22px;
+      color: $black-basic;
+      text-transform: none;
+      background-color: transparent;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 15px;
+        background-image: url('../../public/content/img/icons/back-arrow-black.svg');
+        background-repeat: no-repeat;
+        background-size: 20px 15px;
+        background-position: center;
+        transform: translateY(-50%);
+      }
+  
+      &:hover, &:focus {
+        color: $red;
+        background-color: transparent;
+  
+        &::before {
+          background-image: url('../../public/content/img/icons/back-arrow.svg');
+        }
+      }
+    }
+  }

@@ -1,0 +1,50 @@
+@import '../../style/variables.scss';
+
+.comics-list__item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  
+    &:hover {
+      .comics-list__name, .comics-list__price {
+        color: $red;
+        text-decoration: underline;
+      }
+  
+      .comics-list__price {
+        font-weight: 700;
+      }
+  
+      .comics-list__image {
+        opacity: 0.8;
+      }
+    }
+}
+
+.comics-list__poster {
+    height: 310px;
+}
+
+.comics-list__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comics-list__name {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $grey-dark;
+}
+
+.comics-list__price {
+    font-size: 14px;
+    line-height: 16px;
+}
+  
