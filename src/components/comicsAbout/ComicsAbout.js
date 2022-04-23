@@ -1,7 +1,8 @@
 import LikeButton from '../likeButton/LikeButton';
 import './comicsAbout.scss';
 
-function ComicsAbout(){
+
+function ComicsAbout({ currentComic }){
     return (
         <div className="page-content__comics-about comics-about">
             <div className="comics-about__poster">

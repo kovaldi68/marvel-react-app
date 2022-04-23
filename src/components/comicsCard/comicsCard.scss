@@ -1,8 +1,6 @@
 @import '../../style/variables.scss';
 
 .comics-list__item {
-    display: flex;
-    flex-direction: column;
     cursor: pointer;
   
     &:hover {
@@ -19,10 +17,16 @@
         opacity: 0.8;
       }
     }
+
+    a {
+      display: grid;
+      grid-template-rows: min-content 1fr;
+      height: 100%;
+    }
 }
 
 .comics-list__poster {
-    height: 310px;
+    height: 340px;
 }
 
 .comics-list__image {
@@ -31,11 +35,16 @@
     object-fit: cover;
 }
 
+.comics-list__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .comics-list__name {
     margin: 0;
     padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 18px;
