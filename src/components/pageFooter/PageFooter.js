@@ -1,5 +1,4 @@
 import Logo from "../logo/Logo";
-import UserBlock from "../userBlock/UserBlock";
 import './pageFooter.scss';
 
 function PageFooter() {
@@ -8,7 +7,7 @@ function PageFooter() {
             <div className="page-footer__container container">
                 <Logo />
 
-                <UserBlock />
+                <p className="page-footer__info">Marvel Entertainment, LLC, a wholly-owned subsidiary of The Walt Disney Company.</p>
             </div>
         </footer>
     )

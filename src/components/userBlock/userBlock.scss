@@ -17,6 +17,7 @@
 
 .user-block__link {
   padding: 5px;
+  background-color: $white-basic-op-10;
   border: 1px solid $white-basic;
   border-radius: 5px;
   color: $white-basic;
@@ -28,7 +29,8 @@
 
   &--signup {
     color: $red;
-    border-color: $red;
+    border: none;
+    background-color: transparent;
   }
 
   &--signup-footer {

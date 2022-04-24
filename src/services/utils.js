@@ -4,6 +4,7 @@ export function transformCharacter (character) {
         name: character.name,
         description: character.description,
         thumbnail: character.thumbnail.path + '.' + character.thumbnail.extension,
+        comics: character.comics.items
     }
 };
 

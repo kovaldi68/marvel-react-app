@@ -12,6 +12,7 @@ $main-font: 'Open Sans', 'Verdana', sans-serif;
 
 $white-basic: #ffffff;
 $white-basic-op-60: rgba($white-basic, 0.8);
+$white-basic-op-10: rgba($white-basic, 0.1);
 $black-basic: #000000;
 $black-basic-op-60: rgba($black-basic, 0.6);
 
@@ -20,11 +21,13 @@ $black-basic-op-60: rgba($black-basic, 0.6);
 $grey-dark: #2c2d2e;
 $grey-dark-op-80: rgba($grey-dark, 0.8);
 $grey-border: #c9ccd4;
+$grey-border-op-80: rgba($grey-border, 0.8);
 
 //red
 
 $red: #c50505;
 $red-op-60: rgba($red, 0.6);
+$red-op-30: rgba($red, 0.3);
 
 //transition
 

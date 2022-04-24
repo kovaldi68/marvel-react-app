@@ -1,0 +1,30 @@
+@import '../../style/mixin.scss';
+@import '../../style/variables.scss';
+@import '../../style/button.scss';
+
+.favourites {
+    padding: 30px;
+    padding-top: 50px;
+    background-color: $white-basic-op-60;
+}
+
+.favourites__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.favourites__list {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.favourites__item {
+    position: relative;
+    padding: 20px;
+    background-color: $grey-border-op-80;
+}

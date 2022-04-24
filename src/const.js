@@ -2,7 +2,10 @@ export const AppRoutes = {
     MainChars: '/',
     MainComics: '/comics',
     SignIn: '/login',
-    MyFavs: '/myfavs',
+    SignUp: '/signup',
+    MyFavsChars: '/myfavs/chars',
+    MyFavsComics: '/myfavs/comics',
+    SearchHistory: '/history',
     Character: '/characters/:id',
     Comic: '/comics/:id'
 }

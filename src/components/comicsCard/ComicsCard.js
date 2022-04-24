@@ -1,5 +1,5 @@
 import { NavLink as Link } from "react-router-dom";
-// import { AppRoutes } from '../../const';
+import LikeButton from "../likeButton/LikeButton";
 
 import './comicsCard.scss';
 
@@ -12,6 +12,7 @@ export function ComicsCard({ comicInfo }) {
             <Link className="comics-list__link" to={comicLink}>
                 <div className="comics-list__poster">
                     <img className="comics-list__image" src={thumbnail} alt="" width="225" height="340"/>
+                    <LikeButton className="comics-list__like"/>
                 </div>
                 <div className='comics-list__info'>
                     <p className="comics-list__name">{title}</p>
