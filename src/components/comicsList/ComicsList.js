@@ -30,7 +30,7 @@ class ComicsList extends Component {
                         <ComicsCard key={item.id} comicInfo={item}></ComicsCard>
                     )}
                 </ul>
-                <LoadMoreButton/>
+                <LoadMoreButton />
              </div>
         )
     }

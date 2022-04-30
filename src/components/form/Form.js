@@ -1,6 +1,8 @@
+
+import { NavLink as Link } from 'react-router-dom';
 import './form.scss';
 
-export function Form({ title, button, link }) {
+export function Form({ title, button, linkText, link }) {
     return (
         <form className="page-content__form form">
             <h2 className="form__title">{title}</h2>
@@ -12,7 +14,7 @@ export function Form({ title, button, link }) {
                 <label className="form__label" htmlFor="email">Your password:</label>
                 <input type="password" className="form__input form__input--password" name="email" placeholder='Enter your email password'></input>
             </div>
-            <a  className="form__link" href="">{link}</a>
+            <Link  className="form__link" to={link}>{linkText}</Link>
             <button type='submit' className="form__button button button-submit">{button}</button>
         </form>
     )

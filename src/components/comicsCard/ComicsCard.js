@@ -4,7 +4,7 @@ import LikeButton from "../likeButton/LikeButton";
 import './comicsCard.scss';
 
 export function ComicsCard({ comicInfo }) {
-    const {title, thumbnail, price, id } = comicInfo;
+    const { title, thumbnail, price, id } = comicInfo;
     const comicLink = `/comics/${id}`;
 
     return (

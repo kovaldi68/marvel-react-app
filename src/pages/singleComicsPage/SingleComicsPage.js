@@ -16,8 +16,8 @@ function SingleComicsPage() {
         const getData = new Marvel();
 
         getData.getComic(id)
-        .then(res => setComic(res));
-    });
+        .then(setComic);
+    }, [id]);
 
     return (
         <div className="page-content__comics-about comics-about">

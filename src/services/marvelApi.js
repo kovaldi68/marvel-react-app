@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import { transformCharacter, transformComic } from './utils';
 
+const { REACT_APP_MY_API_KEY } = process.env;
+
 class Marvel extends Component{
     _mainUrl = 'https://gateway.marvel.com:443/v1/public/';
-    _apiKey = 'apikey=1ad1d38a11b0514c4b4113b83a4e0bf6';
+    _apiKey = REACT_APP_MY_API_KEY;
 
     getData = async (url) => {
         let res = await fetch(url);

@@ -16,8 +16,8 @@ function SingleCharacterPage() {
         const getData = new Marvel();
 
         getData.getCharacter(id)
-        .then(res => setChar(res));
-    });
+        .then(setChar);
+    }, [id]);
 
     return (
         <div className="page-content__character-info character-info">
