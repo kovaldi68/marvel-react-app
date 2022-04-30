@@ -27,10 +27,10 @@ class ComicsList extends Component {
             <div className="page-content__comics-list comics-list">
                 <ul className="comics-list__grid">
                     {this.state.data.map(item => 
-                        <ComicsCard key={item.id} title={item.title} thumb={item.thumbnail} price={item.price}></ComicsCard>
+                        <ComicsCard key={item.id} comicInfo={item}></ComicsCard>
                     )}
                 </ul>
-                <LoadMoreButton></LoadMoreButton>
+                <LoadMoreButton />
              </div>
         )
     }

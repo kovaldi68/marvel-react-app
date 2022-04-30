@@ -1,18 +1,22 @@
+import { NavLink as Link } from 'react-router-dom';
+import { AppRoutes } from '../../const';
+
 import './userBlock.scss';
 
 function UserBlock() {
     return (
         <ul className="page-header__user-block user-block">
-            {/* <li className="user-block__item ">
-                <div className="user-block__avatar">
-                <img src="img/avatar.jpg" alt="User avatar" width="63" height="63" />
-                </div>
-            </li> */}
             <li className="user-block__item">
-                <a className="user-block__link user-block__link--signin" href="">Sign in</a>
+                <Link className="user-block__link user-block__link--signup" to={AppRoutes.SignUp}>Sign up</Link>
             </li>
             <li className="user-block__item">
-                <a className="user-block__link user-block__link--signup user-block__link--footer" href="">Sign up</a>
+                <Link className="user-block__link user-block__link--signin" to={AppRoutes.SignIn}>Sign in</Link>
+            </li>
+            <li className="user-block__item">
+                <Link className="user-block__link user-block__link--favourites" to={AppRoutes.MyFavsChars}>Favourites</Link>
+            </li>
+            <li className="user-block__item">
+                <Link className="user-block__link user-block__link--history" to={AppRoutes.SearchHistory}>History</Link>
             </li>
         </ul>
     )
