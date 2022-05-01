@@ -2,10 +2,10 @@ import { Component } from 'react';
 import { transformCharacter, transformComic } from './utils';
 
 const { REACT_APP_MY_API_KEY } = process.env;
+const { REACT_APP_MARVEL_URL } = process.env;
 
 class Marvel extends Component{
-    _mainUrl = 'https://gateway.marvel.com:443/v1/public/';
-    _apiKey = REACT_APP_MY_API_KEY;
+    _baseOffset = 250;
 
     getData = async (url) => {
         let res = await fetch(url);
@@ -17,24 +17,24 @@ class Marvel extends Component{
         return await res.json();
     }
 
-    async getAllCharacters() {
-        const res = await this.getData(`${this._mainUrl}characters?limit=10&offset=190&${this._apiKey}`);
+    async getAllCharacters(offset = this._baseOffset) {
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}characters?limit=10&offset=${offset}&${REACT_APP_MY_API_KEY}`);
         return res.data.results.map(transformCharacter);
     }
 
-    async getAllComics() {
-        const res = await this.getData(`${this._mainUrl}comics?limit=10&offset=300&${this._apiKey}`);
+    async getAllComics(offset = this._baseOffset) {
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}comics?limit=10&offset=${offset}&${REACT_APP_MY_API_KEY}`);
         return res.data.results.map(transformComic);
     }
     
     async getCharacter(id) {
-        const res = await this.getData(`${this._mainUrl}characters/${id}?${this._apiKey}`);
-        return await transformCharacter(res.data.results[0]);
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}characters/${id}?${REACT_APP_MY_API_KEY}`);
+        return transformCharacter(res.data.results[0]);
     }
 
     async getComic(id) {
-        const res = await this.getData(`${this._mainUrl}comics/${id}?${this._apiKey}`);
-        return await transformComic(res.data.results[0]);
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}comics/${id}?${REACT_APP_MY_API_KEY}`);
+        return transformComic(res.data.results[0]);
     }
 }
 

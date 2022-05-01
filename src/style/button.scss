@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 40px;
+    min-height: 35px;
     background-color: $black-basic;
     border-style: none;
     border-radius: 0;
@@ -88,6 +89,16 @@
       path {
         fill-rule: nonzero;
         fill: $white-basic;
+      }
+    }
+
+    &--load {
+      &:disabled {
+        background-color: $red-op-60;
+        background-image: url('../../public/content/img/spinner.gif');
+        background-position: center right 10px;
+        background-size: 20px;
+        background-repeat: no-repeat;
       }
     }
   }
