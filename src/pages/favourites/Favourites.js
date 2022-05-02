@@ -1,32 +1,25 @@
-import { useSelector } from 'react-redux';
-// import { useState, useEffect } from "react";
-// import Marvel from '../../services/marvelApi';
-
-// import LikeButton from "../../components/likeButton/LikeButton";
+import { useDispatch, useSelector } from 'react-redux';
+import { FavouritesItem } from '../../components/favouritesItem/FavouritesItem';
+import { deleteAll } from '../../components/store/favouritesSlice';
 
 import './favourites.scss';
 
 export function Favourites() {
-    // const [char, setChar] = useState(0);
-    const { favs } = useSelector(state => state.favourites);
-
+    const dispatch = useDispatch();
+    const favsState = useSelector(state => state.favourites);
+    
     return (
         <div className="page-content__favourites favourites">
             <h2 className="favourites__title">Your Favourites:</h2>
+            <button onClick={() => dispatch(deleteAll(favsState))}
+                    className='favourites__button button'
+                    type='button'>Remove All
+            </button>
             <ul className="favourites__list">
-                {favs.map((item) => 
-                     <li>{item}</li>
-                    )
-                }
-                {/* <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites`}/>
-                    </div>
-                </li>
-                {/* <CharacterCard className={'favourites'}/> */}
+                {favsState.favs.map((item) => (
+                    <FavouritesItem key={item} id={item}></FavouritesItem>
+                ))}
             </ul>
-        </div>
-        
+        </div>  // {/* <CharacterCard className={'favourites'}/> */}
     )
 }

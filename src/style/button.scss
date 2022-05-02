@@ -71,24 +71,27 @@
       height: 50px;
       border: none;
       background-color: $black-basic-op-60;
+      background-image: url('../../public/content/img/icons/heart.svg');
+      background-position: center;
+      background-size: 25px;
+      background-repeat: no-repeat;
       border-radius: 50%;
       cursor: pointer;
       
       &:hover, &:focus {
           background-color: $red-op-60;
       }
-      
-      path {
-          fill: $white-basic;
-      }
     }
     
     &--liked {
       background-color: $red;
-  
-      path {
-        fill-rule: nonzero;
-        fill: $white-basic;
+      background-image: url('../../public/content/img/icons/heart-liked.svg');
+      background-position: center;
+      background-size: 25px;
+      background-repeat: no-repeat;
+
+      &:hover, &:focus {
+        background-color: $red-op-60;
       }
     }
 

@@ -3,6 +3,8 @@
 @import '../../style/button.scss';
 
 .favourites {
+    display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     padding-top: 50px;
     background-color: $white-basic-op-60;
@@ -21,10 +23,10 @@
     grid-template-columns: repeat(4, 1fr);
     row-gap: 10px;
     column-gap: 10px;
+    width: 100%;
 }
 
-.favourites__item {
-    position: relative;
-    padding: 20px;
-    background-color: $grey-border-op-80;
+.favourites__button {
+    align-self: flex-start;
+    margin-left: auto;
 }

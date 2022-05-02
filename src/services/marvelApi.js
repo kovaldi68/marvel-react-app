@@ -5,7 +5,9 @@ const { REACT_APP_MY_API_KEY } = process.env;
 const { REACT_APP_MARVEL_URL } = process.env;
 
 class Marvel extends Component{
-    _baseOffset = 250;
+    _baseOffset = 210;
+    _limitOnItemsLoading = 10;
+    _totalCharacters = 0;
 
     getData = async (url) => {
         let res = await fetch(url);
@@ -18,13 +20,9 @@ class Marvel extends Component{
     }
 
     async getAllCharacters(offset = this._baseOffset) {
-        const res = await this.getData(`${REACT_APP_MARVEL_URL}characters?limit=10&offset=${offset}&${REACT_APP_MY_API_KEY}`);
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}characters?limit=${this._limitOnItemsLoading}&offset=${offset}&${REACT_APP_MY_API_KEY}`);
+        this._totalCharacters = await res.data.total;
         return res.data.results.map(transformCharacter);
-    }
-
-    async getAllComics(offset = this._baseOffset) {
-        const res = await this.getData(`${REACT_APP_MARVEL_URL}comics?limit=10&offset=${offset}&${REACT_APP_MY_API_KEY}`);
-        return res.data.results.map(transformComic);
     }
     
     async getCharacter(id) {

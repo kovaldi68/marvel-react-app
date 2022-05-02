@@ -9,23 +9,19 @@ export const favouritesSlice = createSlice({
     toggleFavourites(state, action) {
       const id = action.payload;
 
-      if (state.favs.id) {
-        delete state.favs[id];
+      if (state.favs.includes(id)) {
+        state.favs.splice(state.favs.indexOf(id), 1);
       } else {
         state.favs.push(id);
       }
     },
 
     deleteAll(state) {
-      state = {};
-    },
-
-    replaceAll(state, action) {
-      state = action.payload;
+      state.favs = [];
     },
   }
 })
 
-export const { toggleFavourites, deleteAll, replaceAll } = favouritesSlice.actions
+export const { toggleFavourites, deleteAll } = favouritesSlice.actions
 
 export default favouritesSlice.reducer

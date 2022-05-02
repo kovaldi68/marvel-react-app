@@ -21,7 +21,7 @@ function CharacterCard({ charInfo, className }) {
                 </div>
                 <p className={`${className}__name`}>{name}</p>
             </Link>
-            <LikeButton className={`${className}__like`} id={id}/>
+            <LikeButton className={className} id={id}/>
         </li>
     )
 }
