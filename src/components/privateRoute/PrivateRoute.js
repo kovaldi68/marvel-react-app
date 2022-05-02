@@ -1,23 +1,10 @@
-import { Route, Redirect } from 'react-router-dom';
-import { AppRoutes, AuthStatus } from '../../const';
+import { Navigate } from 'react-router-dom';
+import { AppRoutes } from '../../const';
 
-function PrivateRoute({
-  exact,
-  path,
-  render,
-  authStatus,
-}) {
-  return (
-    <Route
-      exact={exact}
-      path={path}
-      render={() => (
-        authStatus === AuthStatus.Auth
-          ? render()
-          : <Redirect to={AppRoutes.SignIn} />
-      )}
-    />
-  );
+export function PrivateRoute({ children, authStatus }) {
+  if (authStatus !== 'AUTH') {
+    return <Navigate to={AppRoutes.SignIn} replace />;
+  }
+
+  return children;
 }
-
-export default PrivateRoute;

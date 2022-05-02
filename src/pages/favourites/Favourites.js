@@ -1,53 +1,25 @@
-import ContentList from "../../components/contentList/ContentList";
-import LikeButton from "../../components/likeButton/LikeButton";
+import { useDispatch, useSelector } from 'react-redux';
+import { FavouritesItem } from '../../components/favouritesItem/FavouritesItem';
+import { deleteAll } from '../../components/store/favouritesSlice';
 
 import './favourites.scss';
 
 export function Favourites() {
+    const dispatch = useDispatch();
+    const favsState = useSelector(state => state.favourites);
+    
     return (
         <div className="page-content__favourites favourites">
             <h2 className="favourites__title">Your Favourites:</h2>
-            <ContentList />
+            <button onClick={() => dispatch(deleteAll(favsState))}
+                    className='favourites__button button'
+                    type='button'>Remove All
+            </button>
             <ul className="favourites__list">
-                {/* <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites`}/>
-                    </div>
-                </li>
-                <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites`}/>
-                    </div>
-                </li>
-                <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites`}/>
-                    </div>
-                </li>
-                <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites`}/>
-                    </div>
-                </li>
-                <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites__like`}/>
-                    </div>
-                </li>
-                <li className={`favourites__item`}>
-                    <div className={`favourites__poster`}>
-                        <img className={`favourites__image`} src="" alt="" width="225" height="310"/>
-                        <LikeButton className={`favourites__like`}/>
-                    </div>
-                </li> */}
-                {/* <CharacterCard className={'favourites'}/> */}
+                {favsState.favs.map((item) => (
+                    <FavouritesItem key={item} id={item}></FavouritesItem>
+                ))}
             </ul>
-        </div>
-        
+        </div>  // {/* <CharacterCard className={'favourites'}/> */}
     )
 }

@@ -13,7 +13,7 @@ function UserBlock() {
                 <Link className="user-block__link user-block__link--signin" to={AppRoutes.SignIn}>Sign in</Link>
             </li>
             <li className="user-block__item">
-                <Link className="user-block__link user-block__link--favourites" to={AppRoutes.MyFavsChars}>Favourites</Link>
+                <Link className="user-block__link user-block__link--favourites" to={AppRoutes.MyFavs}>Favourites</Link>
             </li>
             <li className="user-block__item">
                 <Link className="user-block__link user-block__link--history" to={AppRoutes.SearchHistory}>History</Link>
