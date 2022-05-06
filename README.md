@@ -37,10 +37,10 @@ React
 :white_check_mark: Пишем функциональные компоненты c хуками в приоритете над классовыми  
 :white_check_mark: Есть четкое разделение на умные и глупые компоненты  
 :white_check_mark: Есть рендеринг списков (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/characterList/CharacterList.js)  
-:white_check_mark: Реализована хотя бы одна форма https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/userForm/UserForm.js  
+:white_check_mark: Реализована хотя бы одна форма (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/userForm/UserForm.js)  
 :white_check_mark: Есть применение Контекст API (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/app/App.js)  
 :white_check_mark: Есть применение предохранителя (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/errorBoundary/ErrorBoundary.js)  
-:white_check_mark: Есть хотя бы один кастомный хук (https://github.com/kovaldi68/marvel-react-app/blob/master/src/pages/singleCharacterPage/SingleCharacterPage.js)
+:white_check_mark: Есть хотя бы один кастомный хук (https://github.com/kovaldi68/marvel-react-app/blob/master/src/pages/singleCharacterPage/SingleCharacterPage.js)  
 :white_check_mark: Хотя бы несколько компонентов используют PropTypes (https://github.com/kovaldi68/marvel-react-app/blob/0b7330e6abcd41e2add4092d8b99b1e523adf1c2/src/components/characterCard/CharacterCard.js, https://github.com/kovaldi68/marvel-react-app/blob/0b7330e6abcd41e2add4092d8b99b1e523adf1c2/src/components/likeButton/LikeButton.js)  
 :white_check_mark: Поиск не должен триггерить много запросов к серверу  
   
