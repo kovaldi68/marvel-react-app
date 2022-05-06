@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import storage from '../../services/storage';
+import storage from '../services/storage';
 
 const initialUserState = {
   user: {

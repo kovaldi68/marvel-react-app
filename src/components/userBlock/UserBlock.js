@@ -1,7 +1,7 @@
 import { NavLink as Link } from 'react-router-dom';
 import { AppRoutes } from '../../const';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../store/userActionsSlice';
+import { logout } from '../../store/userActionsSlice';
 import CharacterList from '../characterList/CharacterList';
 
 import './userBlock.scss';

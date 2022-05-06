@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage as FormikErrorMessage } from 'formik'
 import * as Yup from 'yup';
 import { NavLink as Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signin, signup } from '../store/userActionsSlice';
+import { signin, signup } from '../../store/userActionsSlice';
 
 import './userForm.scss';
 import { AppRoutes } from '../../const';

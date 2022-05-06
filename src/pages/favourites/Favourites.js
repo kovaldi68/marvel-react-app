@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { FavouritesItem } from '../../components/favouritesItem/FavouritesItem';
-import { deleteAllFavs, updateUser } from '../../components/store/userActionsSlice';
-import { store } from '../../components/store/store';
+import { deleteAllFavs, updateUser } from '../../store/userActionsSlice';
+import { store } from '../../store/store';
 
 import './favourites.scss';
 

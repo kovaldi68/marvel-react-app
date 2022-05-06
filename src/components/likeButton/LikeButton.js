@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { toggleFavourites } from '../store/userActionsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AppRoutes } from '../../const';
+import { toggleFavourites } from '../../store/userActionsSlice';
 
 export function LikeButton(props) {
     const { id } = props;

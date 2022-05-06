@@ -2,9 +2,8 @@ import { Formik, Form, Field, ErrorMessage as FormikErrorMessage } from 'formik'
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { AppRoutes } from '../../const';
-import { addQuery, updateUser } from '../store/userActionsSlice';
+import { addQuery, updateUser } from '../../store/userActionsSlice';
 
 import './searchForm.scss';
 import '../../style/button.scss';

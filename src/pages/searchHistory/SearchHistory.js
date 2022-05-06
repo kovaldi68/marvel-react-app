@@ -1,6 +1,6 @@
 import { NavLink as Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteAllQueries, updateUser } from '../../components/store/userActionsSlice';
+import { deleteAllQueries, updateUser } from '../../store/userActionsSlice';
 
 import './searchHistory.scss'
 
