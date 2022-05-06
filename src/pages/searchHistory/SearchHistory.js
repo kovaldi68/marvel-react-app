@@ -1,6 +1,7 @@
 import { NavLink as Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAllQueries, updateUser } from '../../store/userActionsSlice';
+import { AppRoutes } from '../../const';
 
 import './searchHistory.scss'
 
@@ -22,7 +23,7 @@ export function SearchHistory() {
             <ul className="search-history__list">
                 {historyState.map(item => (
                     <li key={item} className="search-history__item">
-                        <Link className="search-history__link" to="/">{item}</Link>
+                        <Link className="search-history__link" to={`${AppRoutes.SearchResult}?nameStartsWith=${item}`}>{item}</Link>
                     </li>
                 ))}
             </ul>

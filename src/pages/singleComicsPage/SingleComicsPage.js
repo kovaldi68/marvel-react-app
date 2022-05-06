@@ -2,7 +2,7 @@ import { NavLink as Link } from "react-router-dom";
 import { AppRoutes } from '../../const';
 import { useMarvelItem } from '../../hooks/useMarvelItem';
 
-// import './singleComicsPage.scss';
+import './singleComicsPage.scss';
 
 function SingleComicsPage() {
     const comic = useMarvelItem('Comic');

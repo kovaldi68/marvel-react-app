@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { FavouritesItem } from '../../components/favouritesItem/FavouritesItem';
 import { deleteAllFavs, updateUser } from '../../store/userActionsSlice';
-import { store } from '../../store/store';
 
 import './favourites.scss';
 
@@ -25,9 +24,6 @@ export function Favourites() {
                     <FavouritesItem key={item} id={item}></FavouritesItem>
                 ))}
             </ul>
-            <button onClick={() => {
-                    console.log(store.getState());
-                }} type='button'></button>
-        </div>  // {/* <CharacterCard className={'favourites'}/> */}
+        </div>
     )
 }
