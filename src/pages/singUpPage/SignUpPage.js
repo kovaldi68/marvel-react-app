@@ -1,8 +1,12 @@
-import { Form } from "../../components/form/Form";
+import { UserForm } from "../../components/userForm/UserForm";
 import { AppRoutes } from "../../const";
 
 export function SignUpPage() {
     return (
-        <Form title={'Sign Up'} linkText={`Already have an account? Sign In!`} link={AppRoutes.SignIn} button={'Sign me up'}></Form>
+        <UserForm
+            type={'Sign Up'}
+            linkText={`Already have an account? Sign In!`}
+            link={AppRoutes.SignIn}
+            button={'Sign me up'}></UserForm>
     )
 }

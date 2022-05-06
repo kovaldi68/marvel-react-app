@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { ErrorMessage } from '../errorMessage/ErrorMessage';
+import { Loading } from '../loading/Loading';
 import CharacterCard from '../characterCard/CharacterCard';
 import Marvel from '../../services/marvelApi';
 
@@ -13,14 +14,15 @@ class CharacterList extends Component {
 
         this.state = {
             data: [],
+            firstLoading: true,
             loading: true,
-            hasError: false,
             newItemsLoading: false,
+            hasError: false,
             offset: 210,
             dataEnded: false
         };
     }
-
+    
     getData = new Marvel();
 
     componentDidMount() {
@@ -49,6 +51,7 @@ class CharacterList extends Component {
         this.setState(({ offset, data }) => ({
             data: [...data, ...newData],
             loading: false,
+            firstLoading: false,
             newItemsLoading: false,
             offset: offset + this.numberOfNewChars,
             dataEnded: lastData,
@@ -63,13 +66,16 @@ class CharacterList extends Component {
     }
 
     render() {
-        const { offset, newItemsLoading, dataEnded } = this.state;
+        const { data, loading, hasError, offset, newItemsLoading, dataEnded } = this.state;
+        
+        const loadingSpinner = loading ? <Loading /> : null;
 
         return (
-            this.state.error ? <ErrorMessage /> :
+            hasError ? <ErrorMessage /> :
             <div className="page-content__character-list character-list">
+                { loadingSpinner }
                 <ul className="character-list__grid">
-                    {this.state.data.map(item => 
+                    {data.map(item => 
                         <CharacterCard 
                             key={item.id}
                             charInfo={item}
@@ -77,6 +83,7 @@ class CharacterList extends Component {
                         />
                     )}
                 </ul>
+                {this.state.firstLoading ? null : 
                 <button 
                     type="button"
                     className="character-list__load-button button button--load"
@@ -87,7 +94,7 @@ class CharacterList extends Component {
                     }}
                 >
                     i want to see more
-                </button>
+                </button>}
             </div>
         )
     }

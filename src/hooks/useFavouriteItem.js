@@ -8,7 +8,7 @@ export function useFavourite(id) {
         const getData = new Marvel();
 
         getData.getCharacter(id)
-        .then(setUnit);
+            .then(setUnit);
     }, [id]);
 
     return unit;
