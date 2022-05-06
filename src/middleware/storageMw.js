@@ -1,6 +1,6 @@
-import storage from './storage';
+import storage from '../services/storage';
 
-export const storageMiddleware = (store) => (next) => (action) => {
+export const storageMw = (store) => (next) => (action) => {
   if (action.type === 'userData/signin') {
     const user = storage.getUser(action.payload.userMail, action.payload.userPassw);
     action.payload = user;

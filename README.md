@@ -29,42 +29,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Реализованы Требования к функциональности:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+:white_check_mark: Пишем функциональные компоненты c хуками в приоритете над классовыми
+:white_check_mark: Есть четкое разделение на умные и глупые компоненты 
+:white_check_mark: Есть рендеринг списков (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/characterList/CharacterList.js)
+:white_check_mark: Реализована хотя бы одна форма https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/userForm/UserForm.js
+:white_check_mark: Есть применение Контекст API (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/app/App.js)
+:white_check_mark: Есть применение предохранителя (https://github.com/kovaldi68/marvel-react-app/blob/master/src/components/errorBoundary/ErrorBoundary.js)
+:white_check_mark: Есть хотя бы один кастомный хук (https://github.com/kovaldi68/marvel-react-app/blob/master/src/pages/singleCharacterPage/SingleCharacterPage.js)
+:white_check_mark: Хотя бы несколько компонентов используют PropTypes (https://github.com/kovaldi68/marvel-react-app/blob/0b7330e6abcd41e2add4092d8b99b1e523adf1c2/src/components/characterCard/CharacterCard.js, https://github.com/kovaldi68/marvel-react-app/blob/0b7330e6abcd41e2add4092d8b99b1e523adf1c2/src/components/likeButton/LikeButton.js)
+:white_check_mark: Поиск не должен триггерить много запросов к серверу
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Redux
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:white_check_mark: Используем Modern Redux with Redux Toolkit (https://redux.js.org/tutorials/fundamentals/part-8-modern-redux)
+:white_check_mark: Используем слайсы (https://github.com/kovaldi68/marvel-react-app/blob/0b7330e6abcd41e2add4092d8b99b1e523adf1c2/src/components/store/userActionsSlice.js)
+:white_check_mark: Есть хотя бы одна кастомная мидлвара (https://github.com/kovaldi68/marvel-react-app/blob/master/src/middleware/storageMw.js)
+:x: Используется RTK Query (https://redux.js.org/tutorials/essentials/part-7-rtk-query-basics)
+:x: Используется Transforming Responses (https://redux.js.org/tutorials/essentials/part-8-rtk-query-advanced#transforming-responses)
