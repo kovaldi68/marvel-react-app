@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import searchHistoryReducer from './searchHistorySlice';
-import favouritesReducer from './favouritesSlice';
+import userActionsReducer  from './userActionsSlice';
+import { storageMiddleware } from '../../helpers/storageMW';
 
-export default configureStore({
-    reducer: {
-        searchHistory: searchHistoryReducer,
-        favourites: favouritesReducer,
-      },
-})
+export const store = configureStore({
+  reducer: {
+      userActions: userActionsReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(storageMiddleware)
+});

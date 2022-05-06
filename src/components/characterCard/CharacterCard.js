@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import { NavLink as Link } from 'react-router-dom';
 import { LikeButton } from '../likeButton/LikeButton';
+
 import './characterCard.scss';
 
 function CharacterCard({ charInfo, className }) {
-    const {id, name, thumbnail} = charInfo;
+    const { id, name, thumbnail } = charInfo;
     const charLink = `/characters/${id}`;
 
     return (
@@ -24,6 +26,13 @@ function CharacterCard({ charInfo, className }) {
             <LikeButton className={className} id={id}/>
         </li>
     )
+}
+
+CharacterCard.propTypes = {
+    id: PropTypes.number,
+    name: PropTypes.string,
+    thumbnail: PropTypes.string,
+    className: PropTypes.string
 }
 
 export default CharacterCard;

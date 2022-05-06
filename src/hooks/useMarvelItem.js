@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Marvel from '../services/marvelApi';
 
 export function useMarvelItem(unitName) {
-    const [unit, setUnit] = useState(0);
+    const [unit, setUnit] = useState({});
 
     const { id } = useParams();
 
@@ -13,8 +13,8 @@ export function useMarvelItem(unitName) {
         const getData = new Marvel();
 
         getData[method](id)
-        .then(setUnit);
+            .then(setUnit);
     }, [id, method]);
-
+ 
     return unit;
 }

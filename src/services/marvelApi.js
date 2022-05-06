@@ -24,6 +24,11 @@ class Marvel extends Component{
         this._totalCharacters = await res.data.total;
         return res.data.results.map(transformCharacter);
     }
+
+    async getCharactersbyName(query) {
+        const res = await this.getData(`${REACT_APP_MARVEL_URL}characters?nameStartsWith=${query}&${REACT_APP_MY_API_KEY}`);
+        return res.data.results.map(transformCharacter);
+    }
     
     async getCharacter(id) {
         const res = await this.getData(`${REACT_APP_MARVEL_URL}characters/${id}?${REACT_APP_MY_API_KEY}`);

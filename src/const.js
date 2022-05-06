@@ -4,6 +4,7 @@ export const AppRoutes = {
     SignUp: '/signup',
     MyFavs: '/myfavs',
     SearchHistory: '/history',
+    SearchResult: '/characters',
     Character: '/characters/:id',
     Comic: '/comics/:id'
 }
